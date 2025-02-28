@@ -1,0 +1,250 @@
+/* styles.css */
+.afdian-top {
+    background: #9457EB;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    position: relative;
+}
+.afdian-card {
+    color: white;
+    background: #9457EB;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 2; 
+    position: relative;
+}
+
+.top-electric-line {
+    position: absolute;
+    left: -300px; 
+    top: 50%;
+    transform: 
+        translateY(-50%)
+        scaleX(-1);
+    height: 120%;
+    filter: 
+    grayscale(1)
+    brightness(5)
+    contrast(200%); 
+    mix-blend-mode: screen;
+    opacity: 0.6;
+    z-index: 1;
+    width: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.sponsor-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.sponsor-card:hover {
+    transform: translateY(-3px);
+}
+
+.sponsor-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+.sponsor-name {
+    text-align: center;
+    color: #333;
+    margin: 0;
+    font-size: 16px;
+}
+
+.sponsor-amount {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.page-link {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 0 4px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+}
+
+.page-link.current {
+    background: #00d9ff;
+    color: white;
+}
+
+a:link { color: #00d9ff; }
+a:visited { color: #ff006a; }
+a:hover { color: #09ff00; }
+a:active { color: #0050b8; }
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.3);
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h1 {
+    margin: 0 0 5px 0;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.profile-info h2 {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.sponsor-button {
+    padding: 8px 20px;
+    background: rgba(255,255,255,0.9);
+    color: #9457EB !important;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lightning-icon {
+  /* 图标动画效果 */
+  transition: transform 0.2s ease;
+  vertical-align: middle;
+}
+
+.sponsor-button:hover {
+    background: white;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* 悬停动效 */
+.sponsor-button:hover .lightning-icon {
+  transform: rotate(-20deg) scale(1.2);
+}
+
+@media (max-width: 480px) {
+    .profile-avatar {
+        width: 60px;
+        height: 60px;
+    }
+    .profile-info h1 {
+        font-size: 20px;
+    }
+}
+
+/* 页脚样式 */
+.site-footer {
+    margin-top: 50px;
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-top: 1px solid #eee;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.copyright {
+    color: #946cee;
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.beian a {
+    color: #666;
+    font-size: 0.85em;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.beian a:hover {
+    color: #00d9ff; /* 使用你的主题色 */
+    text-decoration: underline;
+}
+
+.heart {
+    color: #ff4d4d;
+    margin: 0 3px;
+    display: inline-block;
+    animation: heartbeat 1.2s infinite;
+}
+
+/* 心跳动画 */
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    15% { transform: scale(1.3); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.15); }
+    60% { transform: scale(1); }
+}
+
+/* 移动端适配 */
+@media (max-width: 480px) {
+    .site-footer {
+        padding: 15px 10px;
+    }
+    .copyright {
+        font-size: 0.8em;
+    }
+    .beian a {
+        font-size: 0.75em;
+    }
+    .top-electric-line {
+        display: none;
+    }
+}
